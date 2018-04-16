@@ -20,8 +20,8 @@ namespace Parcels.Controllers
         myParcelVariable.SetLength(int.Parse(Request.Query["length"]));
         myParcelVariable.SetWeight(int.Parse(Request.Query["weight"]));
         myParcelVariable.SetDistance(int.Parse(Request.Query["distance"]));
-        myParcelVariable.SetResult(int.Parse(Request.Query["result"]));
-        myParcelVariable.SetResult2(int.Parse(Request.Query["result2"]));
+
+
         return View(myParcelVariable);
       }
 
