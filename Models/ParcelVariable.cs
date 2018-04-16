@@ -51,14 +51,14 @@ namespace Parcels.Models
           _distance = newDistance;
         }
 
-        private int _volume;
         public int GetVolume()
         {
-          return _volume;
+          return (_weight * _height * _length);
         }
-        public void SetVolume(int _weight, int _height, int _length)
+
+        public int GetCost()
         {
-          _volume = (_weight * _height * _length);
+          return (_distance * _weight);
         }
 
         private int _result;

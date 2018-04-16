@@ -5,9 +5,15 @@ namespace Parcels.Controllers
 {
     public class HomeController : Controller
     {
-        [Route("/")]
-        public ActionResult Parcels()
-        {
+      [Route("/")]
+      public ActionResult Index()
+      {
+      return View();
+      }
+
+      [Route("/parcel")]
+      public ActionResult Parcels()
+      {
         ParcelVariable myParcelVariable = new ParcelVariable();
         myParcelVariable.SetHeight(int.Parse(Request.Query["height"]));
         myParcelVariable.SetWidth(int.Parse(Request.Query["width"]));
@@ -17,7 +23,7 @@ namespace Parcels.Controllers
         myParcelVariable.SetResult(int.Parse(Request.Query["result"]));
         myParcelVariable.SetResult2(int.Parse(Request.Query["result2"]));
         return View(myParcelVariable);
-        }
+      }
 
     }
 }
